@@ -1,0 +1,65 @@
+mnasnet:
+ full_name: mnasnet_b1 
+ ckpt_path: None 
+
+efficientnetb0:
+ full_name: efficientnet_b0
+ ckpt_path: None
+
+resnet152:
+ full_name: resnet152 
+ ckp_path: None 
+
+densenet121: 
+ full_name: densenet121
+ ckp_path: None
+
+convnextb:
+ full_name: convnext_base
+ ckpt_path: None
+
+repvgg:
+ full_name: repvgg_b1
+ ckpt_path: None 
+
+vgg19:
+ full_name: vgg19
+ ckp_path: vgg16/vgg16_bn_cifar10.pth.tar
+
+
+vit_b:
+ full_name: vit_base_patch16_224
+ ckp_path: vit_b/vit_base.pth.tar
+
+
+deit_b:
+ full_name: deit_base_patch16_224
+ ckp_path: deit_b/deit_base.pth.tar
+
+
+swin_b:
+ full_name: swin_base_patch4_window7_224
+ ckp_path: swin_b/swin_base.pth.tar
+
+
+cait:
+ full_name: cait_s24_224
+ ckpt_path: None 
+
+convit:
+ full_name: convit_base
+ ckpt_path: None 
+
+pit: 
+ full_name: pit_b_224
+ ckpt_path: None 
+
+tnt:
+ full_name: tnt_s_patch16_224
+ ckpt_path: None
+
+
+
+
+
+
