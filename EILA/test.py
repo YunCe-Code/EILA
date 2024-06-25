@@ -1,6 +1,5 @@
 import torch
 from tqdm import tqdm
-# from utils.get_attack import get_attack
 from utils.get_dataset import get_dataset
 from utils.get_models import get_models, get_test_models
 from utils.tools import same_seeds, get_project_path
@@ -57,24 +56,15 @@ def main(args):
     # show result
     print('-' * 73)
     print('|\tModel name\t|\tNat. Acc. (%)\t|\tAdv. Acc. (%)\t|\tASR. (%)\t|')
-    cnns = ['wrn101_2', 'resnet18', 'resnet50', 'inc_v3', 'bit50_1', 'bit101_1', 
-            'densenet121', 'resnet152']
-    vits = ['vit_b', 'vit_t', 'deit_b', 'deit_t', 'swin_b', 'swin_s']
-    avg_rate = 0
-    num = 0
 
     for model_name, _ in models.items():
         avg_rate += round(metrix[model_name].attack_rate * 100,2)
-        num+=1
-        
         print(f"|\t{model_name.ljust(10, ' ')}\t"
             f"|\t{str(round(metrix[model_name].clean_acc * 100, 2)).ljust(13, ' ')}\t"
             f"|\t{str(round(metrix[model_name].adv_acc * 100, 2)).ljust(13, ' ')}\t"
             f"|\t{str(round(metrix[model_name].attack_rate * 100, 2)).ljust(8, ' ')}\t|")
     print('-' * 73)
-    print ('avg_rate:{}'.format(avg_rate/num))
-    # print ('CNNs average rate:{}'.format(avg_cnns/cnns_num))
-    # print ('ViTs average rate:{}'.format(avg_vits/vits_num))
+
 
 
 if __name__ == '__main__':
