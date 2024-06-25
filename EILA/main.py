@@ -1,6 +1,5 @@
 import torch
 from tqdm import tqdm
-# import os, sys; sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 from utils.get_dataset import get_dataset
 from utils.get_models import get_models
 from utils.tools import same_seeds,get_project_path
@@ -9,7 +8,6 @@ import os
 from utils.eila import EILA
 
 import torch.nn as nn 
-# from torchattack import DIFGSM, MIFGSM, ad
 import torch.nn.functional as F
 
 
@@ -90,7 +88,7 @@ def main(args):
             metrix[model_name].update(correct_clean, correct_adv, n)
         
 
-        if (idx+1) == 20:
+        if (idx+1) == 200:
             break
     torch.save(label_list, os.path.join(label_dir, 'label.pt'))
 
