@@ -26,3 +26,6 @@ If you want to modify the source models utilized to generate adversarial example
 And remember to modify the corresponding Intermediate-layers used in utils/eila.py 
 
 Run command python3 main.py 
+The Transferability-enhanced adversarial examples will be generated and save in the ./results.
+
+You could then Run test.py to evaluate the transferability of generated adversarial examples. If you want to evaluate the transferability on other Imagenet Models included in timm models, feel free to modify the model name in configs/test.yaml.
